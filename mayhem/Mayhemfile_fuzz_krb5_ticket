@@ -1,0 +1,9 @@
+project: savantenvs/krb5
+target: fuzz_krb5_ticket
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_krb5_ticket/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_krb5_ticket
+    libfuzzer: true
+    timeout: 5
