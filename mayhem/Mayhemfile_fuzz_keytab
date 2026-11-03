@@ -1,0 +1,9 @@
+project: savantenvs/krb5
+target: fuzz_keytab
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_keytab/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_keytab
+    libfuzzer: true
+    timeout: 5

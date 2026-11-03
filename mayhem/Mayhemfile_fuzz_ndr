@@ -1,0 +1,9 @@
+project: savantenvs/krb5
+target: fuzz_ndr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ndr/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ndr
+    libfuzzer: true
+    timeout: 5
