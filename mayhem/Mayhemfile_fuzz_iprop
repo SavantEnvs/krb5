@@ -1,0 +1,9 @@
+project: savantenvs/krb5
+target: fuzz_iprop-mined-07818f1
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_iprop-mined-07818f1/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_iprop
+    libfuzzer: true
+    timeout: 5
